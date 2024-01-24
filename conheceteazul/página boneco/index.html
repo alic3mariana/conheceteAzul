@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/estilo.css">
+    <title>Página inicial</title>
+</head>
+<body>
+    <header>
+        <h1>ESCOLHA SEU PERSONAGEM</h1>
+    </header>
+    <div id="principal">
+        <a href="homem.html"><div id="homem"></div></a>
+        <a href="mulher.html"><div id="mulher"></div></a>
+    </div>
+   <script>
+    var clockInterval;
+
+function createClock() {
+    var clock = document.createElement('div');
+    clock.className = 'clock';
+    var randomImage = Math.floor(Math.random() * 4) + 1;
+    clock.innerHTML = '<img src="./assets/imagens/' + randomImage + '.png" alt="clock">';
+    document.body.appendChild(clock);
+
+    var initialX = Math.random() * window.innerWidth;
+    var speed = Math.random() * 1 + 10;
+
+    clock.style.left = initialX + 'px';
+    clock.style.animation = 'fall ' + speed + 's linear infinite, rain ' + speed + 's linear infinite';
+    clock.style.animationDelay = -Math.random() * speed + 's'; // Adicionamos um atraso aleatório
+
+    setTimeout(function () {
+        document.body.removeChild(clock);
+    }, speed * 1000);
+}
+
+function startClocks() {
+    clockInterval = setInterval(createClock, 100);
+}
+
+function stopClocks() {
+    clearInterval(clockInterval);
+}
+
+window.onload = function () {
+    startClocks();
+};
+//zerando todos os contadores
+localStorage.setItem('personagem', 0);
+localStorage.setItem('porcSonhador', 0);
+localStorage.setItem('porcRealista', 0);
+localStorage.setItem('porcemocional', 0);
+localStorage.setItem('porcracional', 0);
+localStorage.setItem('porcintrovertido', 0);
+localStorage.setItem('porcextrovertido', 0);
+localStorage.setItem('porchumilde', 0);
+localStorage.setItem('porcesnobe', 0);
+localStorage.setItem('porcjovem', 0);
+localStorage.setItem('porcsabio', 0);
+   </script>
+    
+</body>
+</html>

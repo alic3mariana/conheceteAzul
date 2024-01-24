@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boneco</title>
+    <Style>
+:root {
+    --cor1: #cad2c5;
+    --cor2: #84a98c;
+    --cor3: #a3b18a;
+    --cor4: #588157;
+    --cor5: #3a5a40;
+}
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(270deg, var(--cor1), var(--cor2), var(--cor3), var(--cor4), var(--cor5));
+    background-size: 500% 500%;
+    animation: AnimationName 40s ease infinite;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    overflow: hidden;
+}
+@keyframes AnimationName {
+    0% {background-position:0% 50%}
+    50% {background-position:100% 50%}
+    100% {background-position:0% 50%}
+}
+header{
+    background-color: transparent;
+    height: 15vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+@font-face {
+    font-family: "Retro Gaming";
+    src: url(./assets/css/Retro\ Gaming.ttf);
+}
+header > h1{
+    font-family: "Retro Gaming";
+    font-weight: 300;
+    font-size: 7vh;
+    color: white;
+    text-align: center;
+    z-index: 1;
+}
+        
+#principal{
+    display: flex;
+    margin-top: 6vh;
+    justify-content: space-around;
+    background-color: transparent;
+}
+#homem{
+    border: none;
+    width: 35vw;
+    margin: 0;
+    height: 65vh;
+    background-image: url("./assets/imagens/homem.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 3%;
+    background-color: #fff;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+#homem:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    border: none;
+    transform: scale(1.02); /* Aumenta um pouco o tamanho ao passar o mouse */
+}
+
+#boca{
+    width: 20%;
+    height: 15%;
+    position: relative;
+    top: 69%;
+    left: 39%;
+    color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: comic;
+    font-weight: 1000;
+    font-size: 2vh;
+    overflow-x:hidden;
+    border: dashed 0.5vh white;
+    border-radius: 3%;
+}
+#boca:hover{
+    border: solid 0.5vh black;
+    cursor: pointer;
+    color: black;
+    background-color: #81B29A;
+    border-radius: 3%;
+}
+#cabeca{
+    width: 20%;
+    height: 15%;
+    position: relative;
+    top: -5%;
+    left: 39%;
+    color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: comic;
+    font-weight: 1000;
+    font-size: 2vh;
+    overflow-x:hidden;
+    border: dashed 0.5vh white;
+    border-radius: 3%;
+}
+#cabeca:hover{
+    border: solid 0.5vh black;
+    cursor: pointer;
+    color: black;
+    border-radius: 3%;
+    background-color: #84a98c;
+}
+#nariz{
+    width: 14%;
+    height: 10%;
+    position: relative;
+    top: 28%;
+    left: 42%;
+    color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: comic;
+    font-weight: 1000;
+    font-size: 2vh;
+    overflow-x:hidden;
+    border: dashed 0.5vh white;
+    border-radius: 3%;
+    
+}
+#nariz:hover{
+    border: solid 0.5vh black;
+    cursor: pointer;
+    color: black;
+    background-color: #588157;
+    border-radius: 3%;
+}
+#olhodireito{
+    width: 15%;
+    height: 20%;
+    position: relative;
+    top: 3%;
+    left: 54%;
+    color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: comic;
+    font-weight: 1000;
+    font-size: 2vh;
+    overflow-x:hidden;
+    border: dashed 0.5vh white;
+    border-radius: 3%;
+}
+#olhodireito:hover{
+    border: solid 0.5vh black;
+    cursor: pointer;
+    color: black;
+    background-color: #5bba6f;
+    border-radius: 3%;
+}
+
+#olhoesquerdo{
+    width: 15%;
+    height: 20%;
+    position: relative;
+    top: -17%;
+    left: 29%;
+    color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: comic;
+    font-weight: 1000;
+    font-size: 2vh;
+    overflow-x:hidden;
+    border: dashed 0.5vh white;
+    border-radius: 3%;
+}
+#olhoesquerdo:hover{
+    border: solid 0.5vh black;
+    cursor: pointer;
+    color: black;
+    background-color: #5bba6f;
+    border-radius: 3%;
+}
+#orelhaesquerda{
+    width: 20%;
+    height: 24%;
+    position: relative;
+    top: -55%;
+    left: 8%;
+    color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: comic;
+    font-weight: 1000;
+    font-size: 2vh;
+    overflow-x:hidden;
+    border: dashed 0.5vh white;
+    border-radius: 3%;
+}
+#orelhaesquerda:hover{
+    border: solid 0.5vh black;
+    cursor: pointer;
+    color: black;
+    background-color: #6a994e;
+    border-radius: 3%;
+}
+#orelhadireita{
+    width: 20%;
+    height: 24%;
+    position: relative;
+    top: -31%;
+    left: 70%;
+    color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: comic;
+    font-weight: 1000;
+    font-size: 2vh;
+    overflow-x:hidden;
+    border: dashed 0.5vh white;
+    border-radius: 3%;
+}
+#orelhadireita:hover{
+    border: solid 0.5vh black;
+    cursor: pointer;
+    color: black;
+    background-color: #6a994e;
+    border-radius: 3%;
+    
+}
+a{
+    text-decoration: none;
+}
+</Style>
+</head>
+<body>
+    <header>
+        <h1>ESCOLHA UM TESTE</h1>
+    </header>
+    <div id="principal">
+        <div id="homem">
+            
+            <a href="../extrovertidoIntrovertidoBoca/index.html"><div id="boca">BOCA</div></a>
+            <a href="../emocionalRacionalCabeca/index.html"><div id="cabeca">CABEÇA</div></a>
+            <a href="../esnobeHumildeNariz/index.html"><div id="nariz">NARIZ</div></a>
+            <a href="../sonhadorRealistaOlhos/teste.html"><div id="olhodireito">OLHOS</div></a>
+            <a href="../sonhadorRealistaOlhos/teste.html"><div id="olhoesquerdo">OLHOS</div></a>
+            <a href="../sabioJovemOrelha/index.html"><div id="orelhadireita">ORELHAS</div></a>
+            <a href="../sabioJovemOrelha/index.html"><div id="orelhaesquerda"><p>ORELHAS</p></div></a>
+        </div>
+       </div>
+       
+
+       <script>
+        
+        window.onload = function() {
+            //escolha personagem
+            localStorage.setItem('personagem', 1);
+
+
+            //RacionalEmocional
+            var porcRacional = localStorage.getItem('porcracional');
+            var porcEmocional = localStorage.getItem('porcemocional');
+
+            if(porcRacional>50){
+                document.getElementById('cabeca').innerHTML = "RACIONAL";
+                var elemento = document.getElementById("cabeca");
+                elemento.style.backgroundColor = "#cad2c5";
+                elemento.style.color = "black";
+                elemento.style.border = "solid 0.5vh #000";
+                elemento.style.fontSize = "2vh";
+
+            }else  if(porcEmocional>50){
+                document.getElementById('cabeca').innerHTML = "EMOCIONAL";
+                var elemento = document.getElementById("cabeca");
+                elemento.style.backgroundColor = "#84a98c";
+                elemento.style.color = "black";
+                elemento.style.border = "solid 0.5vh #000";
+                elemento.style.fontSize = "2vh";
+            } 
+
+            //EsnobeHumilde
+            var porcesnobe = localStorage.getItem('porcesnobe');
+            var porchumilde = localStorage.getItem('porchumilde');
+
+            if(porcesnobe>50){
+                document.getElementById('nariz').innerHTML = "ESNOBE";
+                var elemento = document.getElementById("nariz");
+                elemento.style.backgroundColor = "#588157";
+                elemento.style.color = "black";
+                elemento.style.border = "solid 0.5vh #000";
+                elemento.style.fontSize = "1vh";
+
+            }else  if(porchumilde>50){
+                document.getElementById('nariz').innerHTML = "HUMILDE";
+                var elemento = document.getElementById("nariz");
+                elemento.style.backgroundColor = "#3a5a40";
+                elemento.style.color = "black";
+                elemento.style.border = "solid 0.5vh #000";
+                elemento.style.fontSize = "1vh";
+            } 
+
+            //IntrovertidoExtrovertido
+            var porcintrovertido = localStorage.getItem('porcintrovertido');
+            var porcextrovertido = localStorage.getItem('porcextrovertido');
+
+            if(porcextrovertido>50){
+                document.getElementById('boca').innerHTML = "EXTROVERTIDO";
+                var elemento = document.getElementById("boca");
+                elemento.style.backgroundColor = "#81B29A";
+                elemento.style.color = "black";
+                elemento.style.border = "solid 0.5vh #000";
+                elemento.style.fontSize = "1.6vh";
+                
+
+            }else  if(porcintrovertido>50){
+                document.getElementById('boca').innerHTML = "INTROVERTIDO";
+                var elemento = document.getElementById("boca");
+                elemento.style.backgroundColor = "#7ad674";
+                elemento.style.color = "black";
+                elemento.style.border = "solid 0.5vh #000";
+                elemento.style.fontSize = "1.6vh";
+
+            } 
+            //EsnobeHumilde
+            var porcesnobe = localStorage.getItem('porcesnobe');
+            var porchumilde = localStorage.getItem('porchumilde');
+
+            if(porcesnobe>50){
+                document.getElementById('nariz').innerHTML = "ESNOBE";
+                var elemento = document.getElementById("nariz");
+                elemento.style.backgroundColor = "#cfe1b9";
+                elemento.style.color = "black";
+                elemento.style.border = "solid 0.5vh #000";
+                elemento.style.fontSize = "1vh";
+
+            }else  if(porchumilde>50){
+                document.getElementById('nariz').innerHTML = "HUMILDE";
+                var elemento = document.getElementById("nariz");
+                elemento.style.backgroundColor = "#cfe1b9";
+                elemento.style.color = "black";
+                elemento.style.border = "solid 0.5vh #000";
+                elemento.style.fontSize = "1vh";
+            } 
+
+            //SonhadorRealista
+            var porcsonhador = localStorage.getItem('porcSonhador');
+            var porcrealista = localStorage.getItem('porcRealista');
+
+            if(porcsonhador>50){
+                document.getElementById('olhodireito').innerHTML = "SONHADOR";
+                var elemento = document.getElementById("olhodireito");
+                elemento.style.backgroundColor = "#87986a";
+                elemento.style.color = "black";
+                elemento.style.border = "solid 0.5vh #000";
+                elemento.style.fontSize = "1.5vh";
+
+                document.getElementById('olhoesquerdo').innerHTML = "SONHADOR";
+                var elemento = document.getElementById("olhoesquerdo");
+                elemento.style.backgroundColor = "#87986a";
+                elemento.style.color = "black";
+                elemento.style.border = "solid 0.5vh #000";
+                elemento.style.fontSize = "1.5vh";
+                
+
+            }else  if(porcrealista>50){
+                document.getElementById('olhodireito').innerHTML = "REALISTA";
+                var elemento = document.getElementById("olhodireito");
+                elemento.style.backgroundColor = "#b2ff9e";
+                elemento.style.color = "black";
+                elemento.style.border = "solid 0.5vh #000";
+                elemento.style.fontSize = "1.5vh";
+
+                document.getElementById('olhoesquerdo').innerHTML = "REALISTA";
+                var elemento = document.getElementById("olhoesquerdo");
+                elemento.style.backgroundColor = "#b2ff9e";
+                elemento.style.color = "black";
+                elemento.style.border = "solid 0.5vh #000";
+                elemento.style.fontSize = "1.5vh";
+            }
+            //SabioJovem
+            var porcsabio = localStorage.getItem('porcsabio');
+            var porcjovem = localStorage.getItem('porcjovem');
+
+            if(porcsabio>50){
+                document.getElementById('orelhaesquerda').innerHTML = "SABIO";
+                var elemento = document.getElementById("orelhaesquerda");
+                elemento.style.backgroundColor = "#6a994e";
+                elemento.style.color = "black";
+                elemento.style.border = "solid 0.5vh #000";
+                elemento.style.fontSize = "2vh";
+
+                document.getElementById('orelhadireita').innerHTML = "SABIO";
+                var elemento = document.getElementById("orelhadireita");
+                elemento.style.backgroundColor = "#6a994e";
+                elemento.style.color = "black";
+                elemento.style.border = "solid 0.5vh #000";
+                elemento.style.fontSize = "2vh";
+                
+
+            }else   if(porcjovem>50){
+                document.getElementById('orelhaesquerda').innerHTML = "JOVEM";
+                var elemento = document.getElementById("orelhaesquerda");
+                elemento.style.backgroundColor = "#E07A5F";
+                elemento.style.color = "black";
+                elemento.style.border = "solid 0.5vh #000";
+                elemento.style.fontSize = "2vh";
+
+                document.getElementById('orelhadireita').innerHTML = "JOVEM";
+                var elemento = document.getElementById("orelhadireita");
+                elemento.style.backgroundColor = "#E07A5F";
+                elemento.style.color = "black";
+                elemento.style.border = "solid 0.5vh #000";
+                elemento.style.fontSize = "2vh";
+
+        };}
+   </script>
+    
+</body>
+</html>
